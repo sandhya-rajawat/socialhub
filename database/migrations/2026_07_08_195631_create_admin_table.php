@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->string('profile_picture');
             $table->timestamp('email_verified_at');
             $table->string('password');
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }
@@ -28,3 +29,4 @@ return new class extends Migration {
         Schema::dropIfExists('admin');
     }
 };
+
