@@ -9,18 +9,18 @@ return new class extends Migration {
      * Run the migrations.
      */
     public function up(): void {
-        Schema::create('admin', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->integer('contact_number');
-            $table->string('profile_picture');
-            $table->timestamp('email_verified_at');
-            $table->string('password');
-            $table->tinyInteger('status')->default(1);
-            $table->timestamps();
-        });
-    }
+            Schema::create('admin', function (Blueprint $table) {
+                $table->id();
+                $table->string('name');
+                $table->string('email')->unique();
+                $table->integer('contact_number');
+                $table->string('profile_picture');
+                $table->timestamp('email_verified_at');
+                $table->string('password');
+                $table->tinyInteger('status')->default(1);
+                $table->timestamps();
+            });
+        }
 
     /**
      * Reverse the migrations.
