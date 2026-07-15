@@ -1,63 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Admin Account — SocialHub</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="{{ asset('css/admin/auth.css') }}">
-
-    <style>
-        .sh-auth-brand {
-            display: flex;
-            align-items: center;
-            margin-bottom: 24px;
-        }
-
-        .sh-auth-logo {
-            font-family: var(--sh-font-mono);
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--sh-orange);
-            margin-right: 12px;
-        }
-
-        .sh-auth-brand-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sh-auth-brand-label {
-            font-family: var(--sh-font-mono);
-            font-size: 11px;
-            color: var(--sh-text-faint);
-            text-transform: uppercase;
-        }
-
-        .sh-auth-brand-name {
-            font-family: var(--sh-font-display);
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--sh-text);
-        }
-    </style>
-</head>
-<body>
-    <div class="sh-auth-page">
-        <div class="sh-auth-card">
-            <div class="sh-auth-brand">
-                <span class="sh-auth-logo">S/H</span>
-                <div class="sh-auth-brand-text">
-                    <span class="sh-auth-brand-label">workspace</span>
-                    <span class="sh-auth-brand-name">socialhub</span>
-                </div>
-            </div>
-
-            <h1 class="sh-auth-title">Create admin account</h1>
-            <p class="sh-auth-subtitle">Fill in the details below to add a new admin.</p>
+@extends('admin.auth.auth')
+@section('heading') Create admin account @endsection
+@section('subtitle') Fill in the details below to add a new admin. @endsection
+          @section('content')
 
             <form enctype="multipart/form-data" action="{{ route('admin.signup.store') }}" method="POST">
                 @csrf
@@ -145,7 +89,7 @@
                         Remember me
                     </label>
 
-                    <a href="#" class="sh-auth-link">Already have an account?</a>
+                    <a href="auth.signin" class="sh-auth-link">Already have an account?</a>
                 </div>
 
                 <button type="submit" class="sh-btn sh-btn--primary sh-btn--block">
@@ -158,5 +102,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+@endsection

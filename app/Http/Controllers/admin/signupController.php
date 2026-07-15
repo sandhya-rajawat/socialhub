@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\signupRequest;
 use App\Models\Admin;
 
-class signupController extends Controller
+class SignupController extends Controller
 {
     public function index()
     {

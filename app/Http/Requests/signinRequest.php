@@ -27,4 +27,15 @@ class signinRequest extends FormRequest
           'password' => 'required|string|min:8|confirmed',
         ];
     }
+    public function messages()
+    {
+        return [
+            'email.required' => 'Email is required.',
+            'email.email' => 'Please enter a valid email address.',
+            'email.unique' => 'This email is already registered.',
+            'password.required' => 'Password is required.',
+            'password.min' => 'Password must be at least :min characters.',
+            'password.confirmed' => 'Password confirmation does not match.',
+        ];
+    }
 }
