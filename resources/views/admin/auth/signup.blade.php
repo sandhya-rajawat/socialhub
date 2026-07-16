@@ -2,7 +2,15 @@
 @section('heading') Create admin account @endsection
 @section('subtitle') Fill in the details below to add a new admin. @endsection
           @section('content')
-
+@if ($errors->any())
+    <div class="sh-alert sh-alert--error">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
             <form enctype="multipart/form-data" action="{{ route('admin.signup.store') }}" method="POST">
                 @csrf
                 <div class="sh-field">

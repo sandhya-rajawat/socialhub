@@ -6,7 +6,7 @@ use App\Http\Controllers\admin\SignupController;
 use App\Http\Controllers\admin\SigninController;
 
 
-Route::get('/admin/dashboard', [DashboardController::class, 'index'])
+Route::get('/admin', [DashboardController::class, 'index'])
     ->name('admin.dashboard');
 
 Route::get('/admin/signup', [SignupController::class, 'index'])
