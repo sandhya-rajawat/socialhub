@@ -5,22 +5,25 @@ use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\SignupController;
 use App\Http\Controllers\admin\SigninController;
 
+Route::prefix('admin')->name('admin.')->group(function () {
 
-Route::get('/admin', [DashboardController::class, 'index'])
-    ->name('admin.dashboard');
+    // Dashboard
+Route::get('/', function () {
+    return redirect()->route('admin.signin');
+});
 
-Route::get('/admin/signup', [SignupController::class, 'index'])
-    ->name('admin.signup');
+    // Signup
+    Route::get('/signup', [SignupController::class, 'index'])
+        ->name('signup');
 
-Route::post('/admin/signup', [SignupController::class, 'store'])
-    ->name('admin.signup.store');
+    Route::post('/signup', [SignupController::class, 'store'])
+        ->name('signup.store');
 
+    // Signin
+    Route::get('/signin', [SigninController::class, 'index'])
+        ->name('signin');
 
-
-
-
-
-Route::get('/admin/signin', [SigninController::class, 'index'])
-    ->name('admin.signin');
-Route::post('/admin/signin', [SigninController::class, 'authenticate'])
-    ->name('admin.signin.store');
+    Route::post('/signin', [SigninController::class, 'login'])
+        ->name('signin.login');
+        route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+});

@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\admin;
 
-use app\Http\Requests\SigninRequest;
+use App\Http\Requests\SigninRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Session;
 
 
 class SigninController extends Controller {
@@ -16,19 +15,13 @@ class SigninController extends Controller {
         return view('admin.auth.signin');
     }
 
-    public function authenticate(SigninRequest $request) {
-        $credentials = $request->only('email', 'password');
-        $remember = $request->boolean('remember');
-
-        if (Auth::guard('admin')->attempt($credentials, $remember)) {
-            $request->session()->regenerate();
-
-            return redirect()->route('admin.dashboard')
-                ->with('success', 'Admin signed in successfully.');
+    public function  login(SigninRequest $request) {
+        $admin = Admin::where('email', $request->email)->first();
+        if ($admin && Hash::check($request->password, $admin->password)) {
+            Auth::guard('admin')->login($admin);
+            return redirect()->route('admin.dashboard');
+        } else {
+            return redirect()->back()->withErrors(['email' => 'Invalid credentials.']);
         }
-
-        return back()
-            ->withErrors(['email' => 'Email ya password galat hai.'])
-            ->onlyInput('email');
     }
 }

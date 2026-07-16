@@ -3,7 +3,16 @@
 @section('subtitle') Enter your credentials to access the admin panel. @endsection
 
 @section('content')
-       <form action="{{ route('admin.signin.store') }}" method="POST">
+@if( $errors->any())
+    <div class="sh-alert sh-alert--error">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+    <form action="{{ route('admin.signin.login') }}" method="POST">
     @csrf
     <div class="sh-row-2">
         <div class="sh-field">
@@ -26,6 +35,15 @@
                 placeholder="••••••••"
                 required>
         </div>
+             <div class="sh-field">
+                        <label for="password_confirmation">Confirm Password</label>
+                        <input
+                            type="password"
+                            id="password_confirmation"
+                            name="password_confirmation"
+                            placeholder="••••••••"
+                            required>
+                    </div>
     </div>
 
     <div class="sh-auth-row">
@@ -33,7 +51,9 @@
             <input type="checkbox" name="remember">
             Remember me
         </label>
+          <a href="{{ route('admin.signup') }}" class="sh-auth-link">create account</a>
         <a href="#" class="sh-auth-link">Forgot password?</a>
+      
     </div>
 
     <button type="submit" class="sh-btn sh-btn--primary sh-btn--block">

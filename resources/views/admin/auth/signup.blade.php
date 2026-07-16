@@ -97,7 +97,7 @@
                         Remember me
                     </label>
 
-                    <a href="auth.signin" class="sh-auth-link">Already have an account?</a>
+                    <a href="{{ route('admin.signin') }}" class="sh-auth-link">Already have an account?</a>
                 </div>
 
                 <button type="submit" class="sh-btn sh-btn--primary sh-btn--block">
