@@ -1,4 +1,4 @@
-@extends('admin.auth.auth')
+@extends('admin.auth.auth-layout')
 @section('heading') Create admin account @endsection
 @section('subtitle') Fill in the details below to add a new admin. @endsection
           @section('content')

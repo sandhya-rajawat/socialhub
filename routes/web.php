@@ -25,5 +25,6 @@ Route::get('/', function () {
 
     Route::post('/signin', [SigninController::class, 'login'])
         ->name('signin.login');
-        route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        
 });

@@ -1,4 +1,4 @@
-@extends('admin.auth.auth')
+@extends('admin.auth.auth-layout')
 @section('heading') Sign in @endsection
 @section('subtitle') Enter your credentials to access the admin panel. @endsection
 
