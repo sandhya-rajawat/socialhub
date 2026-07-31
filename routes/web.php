@@ -23,8 +23,8 @@ Route::get('/', function () {
     Route::get('/signin', [SigninController::class, 'index'])
         ->name('signin');
 
-    Route::post('/signin', [SigninController::class, 'login'])
-        ->name('signin.login');
-        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::post('/signin', [SigninController::class, 'store'])
+        ->name('signin.store');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
         
 });

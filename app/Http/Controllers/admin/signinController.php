@@ -15,7 +15,7 @@ class SigninController extends Controller {
         return view('admin.auth.signin');
     }
 
-    public function  login(SigninRequest $request) {
+    public function  store(SigninRequest $request) {
         $admin = Admin::where('email', $request->email)->first();
         if ($admin && Hash::check($request->password, $admin->password)) {
             Auth::guard('admin')->login($admin);

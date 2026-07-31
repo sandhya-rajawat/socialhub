@@ -12,7 +12,7 @@
         </ul>
     </div>
 @endif
-    <form action="{{ route('admin.signin.login') }}" method="POST">
+    <form action="{{ route('admin.signin.store') }}" method="POST">
     @csrf
     <div class="sh-row-2">
         <div class="sh-field">
