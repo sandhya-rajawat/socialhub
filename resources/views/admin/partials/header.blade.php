@@ -28,7 +28,13 @@
         </button>
 
         <div class="sh-user">
-            <div class="sh-user__avatar">A</div>
+          <div class="sh-user__avatar">
+          {{ strtoupper(substr(Auth::guard('admin')->user()->name)) }}
+     {{-- {{ auth()->check() ? strtoupper(auth()->user()->name[0]) : '' }} --}}
+ 
+
+          </div>
+
 
             <div class="sh-user__meta">
                 <span class="sh-user__name">Admin</span>

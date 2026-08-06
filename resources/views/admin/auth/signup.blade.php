@@ -13,6 +13,7 @@
 @endif
             <form enctype="multipart/form-data" action="{{ route('admin.signup.store') }}" method="POST">
                 @csrf
+                <div class="sh-field-row-2">
                 <div class="sh-field">
                     <label for="name">Name</label>
                     <input
@@ -32,6 +33,7 @@
                         name="email"
                         placeholder="you@example.com"
                         required>
+                </div>
                 </div>
 
                 <div class="sh-field">

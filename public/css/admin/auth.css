@@ -1,292 +1,307 @@
     :root {
-            --sh-bg: #0B0B0C;
-            --sh-surface: #17181A;
-            --sh-surface-hover: #202124;
-            --sh-border: #2A2B2E;
-            --sh-orange: #FF5A1F;
-            --sh-orange-dim: #B8431A;
-            --sh-orange-glow: rgba(255, 90, 31, 0.18);
-            --sh-text: #F2F1EE;
-            --sh-text-muted: #8C8D91;
-            --sh-text-faint: #5C5D61;
-            --sh-success: #3FBF7F;
-            --sh-danger: #E5484D;
+        --sh-bg: #0B0B0C;
+        --sh-surface: #17181A;
+        --sh-surface-hover: #202124;
+        --sh-border: #2A2B2E;
+        --sh-orange: #FF5A1F;
+        --sh-orange-dim: #B8431A;
+        --sh-orange-glow: rgba(255, 90, 31, 0.18);
+        --sh-text: #F2F1EE;
+        --sh-text-muted: #8C8D91;
+        --sh-text-faint: #5C5D61;
+        --sh-success: #3FBF7F;
+        --sh-danger: #E5484D;
 
-            --sh-font-display: 'Space Grotesk', 'Inter', sans-serif;
-            --sh-font-body: 'Inter', -apple-system, sans-serif;
-            --sh-font-mono: 'JetBrains Mono', 'Courier New', monospace;
+        --sh-font-display: 'Space Grotesk', 'Inter', sans-serif;
+        --sh-font-body: 'Inter', -apple-system, sans-serif;
+        --sh-font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
-            --sh-radius: 8px;
-        }
+        --sh-radius: 8px;
+    }
 
-        * { box-sizing: border-box; }
+    * {
+        box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            font-family: var(--sh-font-body);
-            font-size: 14px;
-            line-height: 1.5;
-        }
+    body {
+        margin: 0;
+        font-family: var(--sh-font-body);
+        font-size: 14px;
+        line-height: 1.5;
+    }
 
-        a { color: inherit; text-decoration: none; }
-        button { font-family: inherit; cursor: pointer; }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 
-        .sh-auth-page {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--sh-bg);
-            background-image: radial-gradient(circle at 50% 0%, var(--sh-orange-glow), transparent 60%);
-            padding: 40px 20px;
-        }
+    button {
+        font-family: inherit;
+        cursor: pointer;
+    }
 
-        .sh-auth-card {
-            width: 100%;
-            max-width: 420px;
-            background: var(--sh-surface);
-            border: 1px solid var(--sh-border);
-            border-radius: 12px;
-            padding: 32px 28px;
-        }
+    .sh-auth-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--sh-bg);
+        background-image: radial-gradient(circle at 50% 0%, var(--sh-orange-glow), transparent 60%);
+        padding: 40px 20px;
+    }
 
-        .sh-auth-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 28px;
-        }
+    .sh-auth-card {
+        width: 100%;
+        max-width: 420px;
+        background: var(--sh-surface);
+        border: 1px solid var(--sh-border);
+        border-radius: 12px;
+        padding: 32px 28px;
+    }
 
-        .sh-auth-logo {
-            font-family: var(--sh-font-display);
-            font-weight: 700;
-            font-size: 15px;
-            letter-spacing: 0.02em;
-            color: var(--sh-bg);
-            background: var(--sh-orange);
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
+    .sh-auth-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 28px;
+    }
 
-        .sh-auth-brand-text {
-            display: flex;
-            flex-direction: column;
-        }
+    .sh-auth-logo {
+        font-family: var(--sh-font-display);
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        color: var(--sh-bg);
+        background: var(--sh-orange);
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
 
-        .sh-auth-brand-label {
-            font-family: var(--sh-font-mono);
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--sh-text-faint);
-        }
+    .sh-auth-brand-text {
+        display: flex;
+        flex-direction: column;
+    }
 
-        .sh-auth-brand-name {
-            font-family: var(--sh-font-display);
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--sh-text);
-        }
+    .sh-auth-brand-label {
+        font-family: var(--sh-font-mono);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--sh-text-faint);
+    }
 
-        .sh-auth-title {
-            font-family: var(--sh-font-display);
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--sh-text);
-            margin: 0 0 4px;
-        }
+    .sh-auth-brand-name {
+        font-family: var(--sh-font-display);
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--sh-text);
+    }
 
-        .sh-auth-subtitle {
-            font-size: 13px;
-            color: var(--sh-text-muted);
-            margin: 0 0 24px;
-        }
+    .sh-auth-title {
+        font-family: var(--sh-font-display);
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--sh-text);
+        margin: 0 0 4px;
+    }
 
-        .sh-field {
-            margin-bottom: 16px;
-        }
+    .sh-auth-subtitle {
+        font-size: 13px;
+        color: var(--sh-text-muted);
+        margin: 0 0 24px;
+    }
 
-        .sh-field label {
-            display: block;
-            font-family: var(--sh-font-mono);
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--sh-text-faint);
-            margin-bottom: 6px;
-        }
+    .sh-field {
+        margin-bottom: 16px;
+    }
 
-        .sh-field input[type="text"],
-        .sh-field input[type="email"],
-        .sh-field input[type="tel"],
-        .sh-field input[type="password"],
-        .sh-field select {
-            width: 100%;
-            background: var(--sh-bg);
-            border: 1px solid var(--sh-border);
-            border-radius: var(--sh-radius);
-            padding: 10px 12px;
-            font-family: var(--sh-font-body);
-            font-size: 13px;
-            color: var(--sh-text);
-            outline: none;
-            transition: border-color 0.15s ease;
-            appearance: none;
-        }
+    .sh-field label {
+        display: block;
+        font-family: var(--sh-font-mono);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--sh-text-faint);
+        margin-bottom: 6px;
+    }
 
-        .sh-field select {
-            background-image: linear-gradient(45deg, transparent 50%, var(--sh-text-faint) 50%),
-                               linear-gradient(135deg, var(--sh-text-faint) 50%, transparent 50%);
-            background-position: calc(100% - 16px) center, calc(100% - 11px) center;
-            background-size: 5px 5px, 5px 5px;
-            background-repeat: no-repeat;
-        }
+    .sh-field input[type="text"],
+    .sh-field input[type="email"],
+    .sh-field input[type="tel"],
+    .sh-field input[type="password"],
+    .sh-field select {
+        width: 100%;
+        background: var(--sh-bg);
+        border: 1px solid var(--sh-border);
+        border-radius: var(--sh-radius);
+        padding: 10px 12px;
+        font-family: var(--sh-font-body);
+        font-size: 13px;
+        color: var(--sh-text);
+        outline: none;
+        transition: border-color 0.15s ease;
+        appearance: none;
+    }
 
-        .sh-field input:focus,
-        .sh-field select:focus {
-            border-color: var(--sh-orange);
-        }
+    .sh-field select {
+        background-image: linear-gradient(45deg, transparent 50%, var(--sh-text-faint) 50%),
+            linear-gradient(135deg, var(--sh-text-faint) 50%, transparent 50%);
+        background-position: calc(100% - 16px) center, calc(100% - 11px) center;
+        background-size: 5px 5px, 5px 5px;
+        background-repeat: no-repeat;
+    }
 
-        .sh-field input::placeholder {
-            color: var(--sh-text-faint);
-        }
+    .sh-field input:focus,
+    .sh-field select:focus {
+        border-color: var(--sh-orange);
+    }
 
-        /* File upload */
-        .sh-file {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--sh-bg);
-            border: 1px solid var(--sh-border);
-            border-radius: var(--sh-radius);
-            padding: 8px 10px;
-        }
+    .sh-field input::placeholder {
+        color: var(--sh-text-faint);
+    }
 
-        .sh-file__avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--sh-surface-hover);
-            border: 1px solid var(--sh-border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            color: var(--sh-text-faint);
-            flex-shrink: 0;
-            overflow: hidden;
-        }
+    /* File upload */
+    .sh-file {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--sh-bg);
+        border: 1px solid var(--sh-border);
+        border-radius: var(--sh-radius);
+        padding: 8px 10px;
+    }
 
-        .sh-file__avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .sh-file__avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--sh-surface-hover);
+        border: 1px solid var(--sh-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: var(--sh-text-faint);
+        flex-shrink: 0;
+        overflow: hidden;
+    }
 
-        .sh-file__input-wrap {
-            flex: 1;
-            min-width: 0;
-        }
+    .sh-file__avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-        .sh-file input[type="file"] {
-            width: 100%;
-            font-size: 12px;
-            color: var(--sh-text-muted);
-        }
+    .sh-file__input-wrap {
+        flex: 1;
+        min-width: 0;
+    }
 
-        .sh-file input[type="file"]::file-selector-button {
-            background: var(--sh-surface-hover);
-            border: 1px solid var(--sh-border);
-            border-radius: 6px;
-            color: var(--sh-text);
-            font-family: var(--sh-font-body);
-            font-size: 12px;
-            padding: 6px 10px;
-            margin-right: 10px;
-            cursor: pointer;
-        }
+    .sh-file input[type="file"] {
+        width: 100%;
+        font-size: 12px;
+        color: var(--sh-text-muted);
+    }
 
-        .sh-file input[type="file"]::file-selector-button:hover {
-            background: var(--sh-border);
-        }
+    .sh-file input[type="file"]::file-selector-button {
+        background: var(--sh-surface-hover);
+        border: 1px solid var(--sh-border);
+        border-radius: 6px;
+        color: var(--sh-text);
+        font-family: var(--sh-font-body);
+        font-size: 12px;
+        padding: 6px 10px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
 
-        .sh-hint {
-            font-size: 11px;
-            color: var(--sh-text-faint);
-            margin-top: 5px;
-        }
+    .sh-file input[type="file"]::file-selector-button:hover {
+        background: var(--sh-border);
+    }
 
-        .sh-row-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
+    .sh-hint {
+        font-size: 11px;
+        color: var(--sh-text-faint);
+        margin-top: 5px;
+    }
 
-        .sh-auth-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 22px;
-            font-size: 13px;
-        }
+    .sh-row-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
 
-        .sh-checkbox {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--sh-text-muted);
-            cursor: pointer;
-        }
+    .sh-auth-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 22px;
+        font-size: 13px;
+    }
 
-        .sh-checkbox input {
-            accent-color: var(--sh-orange);
-        }
+    .sh-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--sh-text-muted);
+        cursor: pointer;
+    }
 
-        .sh-auth-link {
-            color: var(--sh-orange);
-            font-size: 13px;
-        }
+    .sh-checkbox input {
+        accent-color: var(--sh-orange);
+    }
 
-        .sh-auth-link:hover {
-            color: var(--sh-orange-dim);
-        }
+    .sh-auth-link {
+        color: var(--sh-orange);
+        font-size: 13px;
+    }
 
-        .sh-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 9px 16px;
-            border-radius: var(--sh-radius);
-            font-size: 13px;
-            font-weight: 600;
-            border: 1px solid transparent;
-        }
+    .sh-auth-link:hover {
+        color: var(--sh-orange-dim);
+    }
 
-        .sh-btn--primary {
-            background: var(--sh-orange);
-            color: var(--sh-bg);
-        }
+    .sh-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 9px 16px;
+        border-radius: var(--sh-radius);
+        font-size: 13px;
+        font-weight: 600;
+        border: 1px solid transparent;
+    }
 
-        .sh-btn--primary:hover {
-            background: var(--sh-orange-dim);
-        }
+    .sh-btn--primary {
+        background: var(--sh-orange);
+        color: var(--sh-bg);
+    }
 
-        .sh-btn--block {
-            width: 100%;
-            justify-content: center;
-            padding: 11px 16px;
-            font-size: 14px;
-        }
+    .sh-btn--primary:hover {
+        background: var(--sh-orange-dim);
+    }
 
-        .sh-auth-footer {
-            margin-top: 22px;
-            text-align: center;
-            font-size: 12px;
-            color: var(--sh-text-faint);
-            font-family: var(--sh-font-mono);
-        }
+    .sh-btn--block {
+        width: 100%;
+        justify-content: center;
+        padding: 11px 16px;
+        font-size: 14px;
+    }
+
+    .sh-auth-footer {
+        margin-top: 22px;
+        text-align: center;
+        font-size: 12px;
+        color: var(--sh-text-faint);
+        font-family: var(--sh-font-mono);
+    }
+
+    .sh-field-row-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
