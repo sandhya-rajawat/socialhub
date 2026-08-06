@@ -29,8 +29,15 @@
 
         <div class="sh-user">
           <div class="sh-user__avatar">
-          {{ strtoupper(substr(Auth::guard('admin')->user()->name)) }}
-     {{-- {{ auth()->check() ? strtoupper(auth()->user()->name[0]) : '' }} --}}
+            @php
+            $fullName=Auth::guard('admin')->user()->name;
+            $nameParts=explode(' ', $fullName);
+            $fisrtInitial=substr($nameParts[0], 0, 1);
+            $lastInitial=substr(end($nameParts), 0, 1);
+            $initials=$fisrtInitial.$lastInitial;
+            @endphp
+   {{ strtoupper($initials) }}
+    
  
 
           </div>
