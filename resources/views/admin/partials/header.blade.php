@@ -30,15 +30,31 @@
         <div class="sh-user">
           <div class="sh-user__avatar">
             @php
-            $fullName=Auth::guard('admin')->user()->name;
-            $nameParts=explode(' ', $fullName);
+            $admin=Auth::guard('admin')->user()->name;
+            $nameParts=explode(' ', $admin);
             $fisrtInitial=substr($nameParts[0], 0, 1);
             $lastInitial=substr(end($nameParts), 0, 1);
             $initials=$fisrtInitial.$lastInitial;
             @endphp
    {{ strtoupper($initials) }}
     
- 
+  <div id="userDropdownMenu" class="sh-user__dropdown" style="display: none;">
+        <div class="sh-user__dropdown-header">
+            <strong>{{ Auth::guard('admin')->user()->name }}</strong>
+            <p>{{ Auth::guard('admin')->user()->email }}</p>
+        </div>
+        <hr>
+        <a href="{{ route('admin.settings') }}" class="sh-user__dropdown-item">
+            ⚙️ Settings
+        </a>
+        {{-- <form method="POST" action="{{ route('admin.logout') }}">
+            @csrf
+            <button type="submit" class="sh-user__dropdown-item sh-user__dropdown-logout">
+                🚪 Logout
+            </button>
+        </form> --}}
+    </div>
+</div>
 
           </div>
 

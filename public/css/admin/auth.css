@@ -305,3 +305,52 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
+    .sh-user__dropdown {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: #1a1a1a;
+        border: 1px solid #333;
+        border-radius: 8px;
+        min-width: 200px;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    .sh-user__dropdown-header {
+        padding: 8px 16px;
+        color: #fff;
+    }
+
+    .sh-user__dropdown-header p {
+        font-size: 12px;
+        color: #aaa;
+        margin: 0;
+    }
+
+    .sh-user__dropdown hr {
+        border-color: #333;
+        margin: 8px 0;
+    }
+
+    .sh-user__dropdown-item {
+        display: block;
+        width: 100%;
+        padding: 10px 16px;
+        color: #fff;
+        text-decoration: none;
+        background: none;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .sh-user__dropdown-item:hover {
+        background: #2a2a2a;
+    }
+
+    .sh-user__dropdown-logout {
+        color: #ff5252;
+    }
