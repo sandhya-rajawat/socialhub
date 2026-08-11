@@ -300,57 +300,140 @@
         font-family: var(--sh-font-mono);
     }
 
-    .sh-field-row-2 {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+    .settings-page {
+        padding: 30px;
     }
 
-    .sh-user__dropdown {
-        position: absolute;
-        top: 50px;
-        right: 0;
-        background: #1a1a1a;
-        border: 1px solid #333;
-        border-radius: 8px;
-        min-width: 200px;
-        z-index: 1000;
-        padding: 10px 0;
-    }
-
-    .sh-user__dropdown-header {
-        padding: 8px 16px;
-        color: #fff;
-    }
-
-    .sh-user__dropdown-header p {
-        font-size: 12px;
-        color: #aaa;
-        margin: 0;
-    }
-
-    .sh-user__dropdown hr {
-        border-color: #333;
-        margin: 8px 0;
-    }
-
-    .sh-user__dropdown-item {
-        display: block;
+    .settings-card {
         width: 100%;
-        padding: 10px 16px;
-        color: #fff;
-        text-decoration: none;
-        background: none;
-        border: none;
-        text-align: left;
+        max-width: 600px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 24px;
+        box-sizing: border-box;
+    }
+
+    .settings-card h2 {
+        margin: 0 0 22px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #111;
+    }
+
+
+    /* Profile */
+
+    .profile-photo-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .profile-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #ff5a1f;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+    }
+
+    .profile-avatar span {
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+
+    /* Change Photo */
+
+    .photo-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .change-photo {
+        display: inline-block;
+        width: fit-content;
+
+        padding: 10px 20px;
+
+        border: 1px solid #ccc;
+        border-radius: 10px;
+
+        background: #fff;
+        color: #111;
+
+        font-size: 16px;
         cursor: pointer;
+    }
+
+    .change-photo:hover {
+        background: #f7f7f7;
+    }
+
+    .photo-actions p {
+        margin: 0;
         font-size: 14px;
+        color: #777;
     }
 
-    .sh-user__dropdown-item:hover {
-        background: #2a2a2a;
+
+    /* Form */
+
+    .form-group {
+        margin-bottom: 18px;
     }
 
-    .sh-user__dropdown-logout {
-        color: #ff5252;
+    .form-group label {
+        display: block;
+
+        margin-bottom: 7px;
+
+        font-size: 15px;
+        color: #333;
+    }
+
+    .form-group input {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 11px 15px;
+
+        border: 1px solid #ddd;
+        border-radius: 9px;
+
+        font-size: 18px;
+
+        outline: none;
+    }
+
+    .form-group input:focus {
+        border-color: #999;
+    }
+
+
+    /* Save Button */
+
+    .save-button {
+        padding: 11px 20px;
+
+        background: #fff;
+
+        border: 1px solid #ccc;
+        border-radius: 9px;
+
+        font-size: 16px;
+
+        cursor: pointer;
+    }
+
+    .save-button:hover {
+        background: #f5f5f5;
     }

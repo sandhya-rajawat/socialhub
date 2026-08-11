@@ -22,51 +22,31 @@
                 class="sh-search__input">
         </div>
 
-        <button class="sh-topbar__icon-btn" aria-label="Notifications">
+        {{-- <button class="sh-topbar__icon-btn" aria-label="Notifications">
             <span>◈</span>
             <span class="sh-topbar__badge">3</span>
-        </button>
+        </button> --}}
 
         <div class="sh-user">
-          <div class="sh-user__avatar">
-            @php
-            $admin=Auth::guard('admin')->user()->name;
-            $nameParts=explode(' ', $admin);
-            $fisrtInitial=substr($nameParts[0], 0, 1);
-            $lastInitial=substr(end($nameParts), 0, 1);
-            $initials=$fisrtInitial.$lastInitial;
-            @endphp
-   {{ strtoupper($initials) }}
-    
-  <div id="userDropdownMenu" class="sh-user__dropdown" style="display: none;">
-        <div class="sh-user__dropdown-header">
-            <strong>{{ Auth::guard('admin')->user()->name }}</strong>
-            <p>{{ Auth::guard('admin')->user()->email }}</p>
-        </div>
-        <hr>
-        <a href="{{ route('admin.settings') }}" class="sh-user__dropdown-item">
-            ⚙️ Settings
-        </a>
-        {{-- <form method="POST" action="{{ route('admin.logout') }}">
-            @csrf
-            <button type="submit" class="sh-user__dropdown-item sh-user__dropdown-logout">
-                🚪 Logout
-            </button>
-        </form> --}}
-    </div>
-</div>
-
-          </div>
-
-
-            <div class="sh-user__meta">
-                <span class="sh-user__name">Admin</span>
-                <span class="sh-user__role">admin</span>
+            <div class="sh-user__avatar">
+                @php
+                    $admin = Auth::guard('admin')->user()->name;
+                    $nameParts = explode(' ', $admin);
+                    $firstInitial = substr($nameParts[0], 0, 1);
+                    $lastInitial = substr(end($nameParts), 0, 1);
+                    $initials = $firstInitial . $lastInitial;
+                @endphp
+                {{ strtoupper($initials) }}
             </div>
 
+            {{-- <div class="sh-user__meta">
+                <span class="sh-user__name">{{ Auth::guard('admin')->user()->name }}</span>
+                <span class="sh-user__role">admin</span>
+            </div> --}}
+{{-- 
             <button type="button" class="sh-user__logout" title="Logout">
                 ⏻
-            </button>
+            </button> --}}
         </div>
     </div>
 </header>
