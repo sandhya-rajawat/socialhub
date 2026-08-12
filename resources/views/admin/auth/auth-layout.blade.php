@@ -114,5 +114,6 @@
         </div>
     </div>
     @stack('scripts')
+    <script src="{{ asset('js/admin/user-dropdown.js') }}"></script>
 </body>
 </html>

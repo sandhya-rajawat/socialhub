@@ -1,292 +1,858 @@
     :root {
-            --sh-bg: #0B0B0C;
-            --sh-surface: #17181A;
-            --sh-surface-hover: #202124;
-            --sh-border: #2A2B2E;
-            --sh-orange: #FF5A1F;
-            --sh-orange-dim: #B8431A;
-            --sh-orange-glow: rgba(255, 90, 31, 0.18);
-            --sh-text: #F2F1EE;
-            --sh-text-muted: #8C8D91;
-            --sh-text-faint: #5C5D61;
-            --sh-success: #3FBF7F;
-            --sh-danger: #E5484D;
+        --sh-bg: #0B0B0C;
+        --sh-surface: #17181A;
+        --sh-surface-hover: #202124;
+        --sh-border: #2A2B2E;
+        --sh-orange: #FF5A1F;
+        --sh-orange-dim: #B8431A;
+        --sh-orange-glow: rgba(255, 90, 31, 0.18);
+        --sh-text: #F2F1EE;
+        --sh-text-muted: #8C8D91;
+        --sh-text-faint: #5C5D61;
+        --sh-success: #3FBF7F;
+        --sh-danger: #E5484D;
 
-            --sh-font-display: 'Space Grotesk', 'Inter', sans-serif;
-            --sh-font-body: 'Inter', -apple-system, sans-serif;
-            --sh-font-mono: 'JetBrains Mono', 'Courier New', monospace;
+        --sh-font-display: 'Space Grotesk', 'Inter', sans-serif;
+        --sh-font-body: 'Inter', -apple-system, sans-serif;
+        --sh-font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
-            --sh-radius: 8px;
-        }
+        --sh-radius: 8px;
+    }
 
-        * { box-sizing: border-box; }
+    * {
+        box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            font-family: var(--sh-font-body);
-            font-size: 14px;
-            line-height: 1.5;
-        }
+    body {
+        margin: 0;
+        font-family: var(--sh-font-body);
+        font-size: 14px;
+        line-height: 1.5;
+    }
 
-        a { color: inherit; text-decoration: none; }
-        button { font-family: inherit; cursor: pointer; }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 
-        .sh-auth-page {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--sh-bg);
-            background-image: radial-gradient(circle at 50% 0%, var(--sh-orange-glow), transparent 60%);
-            padding: 40px 20px;
-        }
+    button {
+        font-family: inherit;
+        cursor: pointer;
+    }
 
-        .sh-auth-card {
-            width: 100%;
-            max-width: 420px;
-            background: var(--sh-surface);
-            border: 1px solid var(--sh-border);
-            border-radius: 12px;
-            padding: 32px 28px;
-        }
+    .sh-auth-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--sh-bg);
+        background-image: radial-gradient(circle at 50% 0%, var(--sh-orange-glow), transparent 60%);
+        padding: 40px 20px;
+    }
 
-        .sh-auth-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 28px;
-        }
+    .sh-auth-card {
+        width: 100%;
+        max-width: 420px;
+        background: var(--sh-surface);
+        border: 1px solid var(--sh-border);
+        border-radius: 12px;
+        padding: 32px 28px;
+    }
 
-        .sh-auth-logo {
-            font-family: var(--sh-font-display);
-            font-weight: 700;
-            font-size: 15px;
-            letter-spacing: 0.02em;
-            color: var(--sh-bg);
-            background: var(--sh-orange);
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
+    .sh-auth-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 28px;
+    }
 
-        .sh-auth-brand-text {
-            display: flex;
-            flex-direction: column;
-        }
+    .sh-auth-logo {
+        font-family: var(--sh-font-display);
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        color: var(--sh-bg);
+        background: var(--sh-orange);
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
 
-        .sh-auth-brand-label {
-            font-family: var(--sh-font-mono);
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--sh-text-faint);
-        }
+    .sh-auth-brand-text {
+        display: flex;
+        flex-direction: column;
+    }
 
-        .sh-auth-brand-name {
-            font-family: var(--sh-font-display);
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--sh-text);
-        }
+    .sh-auth-brand-label {
+        font-family: var(--sh-font-mono);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--sh-text-faint);
+    }
 
-        .sh-auth-title {
-            font-family: var(--sh-font-display);
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--sh-text);
-            margin: 0 0 4px;
-        }
+    .sh-auth-brand-name {
+        font-family: var(--sh-font-display);
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--sh-text);
+    }
 
-        .sh-auth-subtitle {
-            font-size: 13px;
-            color: var(--sh-text-muted);
-            margin: 0 0 24px;
-        }
+    .sh-auth-title {
+        font-family: var(--sh-font-display);
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--sh-text);
+        margin: 0 0 4px;
+    }
 
-        .sh-field {
-            margin-bottom: 16px;
-        }
+    .sh-auth-subtitle {
+        font-size: 13px;
+        color: var(--sh-text-muted);
+        margin: 0 0 24px;
+    }
 
-        .sh-field label {
-            display: block;
-            font-family: var(--sh-font-mono);
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--sh-text-faint);
-            margin-bottom: 6px;
-        }
+    .sh-field {
+        margin-bottom: 16px;
+    }
 
-        .sh-field input[type="text"],
-        .sh-field input[type="email"],
-        .sh-field input[type="tel"],
-        .sh-field input[type="password"],
-        .sh-field select {
-            width: 100%;
-            background: var(--sh-bg);
-            border: 1px solid var(--sh-border);
-            border-radius: var(--sh-radius);
-            padding: 10px 12px;
-            font-family: var(--sh-font-body);
-            font-size: 13px;
-            color: var(--sh-text);
-            outline: none;
-            transition: border-color 0.15s ease;
-            appearance: none;
-        }
+    .sh-field label {
+        display: block;
+        font-family: var(--sh-font-mono);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--sh-text-faint);
+        margin-bottom: 6px;
+    }
 
-        .sh-field select {
-            background-image: linear-gradient(45deg, transparent 50%, var(--sh-text-faint) 50%),
-                               linear-gradient(135deg, var(--sh-text-faint) 50%, transparent 50%);
-            background-position: calc(100% - 16px) center, calc(100% - 11px) center;
-            background-size: 5px 5px, 5px 5px;
-            background-repeat: no-repeat;
-        }
+    .sh-field input[type="text"],
+    .sh-field input[type="email"],
+    .sh-field input[type="tel"],
+    .sh-field input[type="password"],
+    .sh-field select {
+        width: 100%;
+        background: var(--sh-bg);
+        border: 1px solid var(--sh-border);
+        border-radius: var(--sh-radius);
+        padding: 10px 12px;
+        font-family: var(--sh-font-body);
+        font-size: 13px;
+        color: var(--sh-text);
+        outline: none;
+        transition: border-color 0.15s ease;
+        appearance: none;
+    }
 
-        .sh-field input:focus,
-        .sh-field select:focus {
-            border-color: var(--sh-orange);
-        }
+    .sh-field select {
+        background-image: linear-gradient(45deg, transparent 50%, var(--sh-text-faint) 50%),
+            linear-gradient(135deg, var(--sh-text-faint) 50%, transparent 50%);
+        background-position: calc(100% - 16px) center, calc(100% - 11px) center;
+        background-size: 5px 5px, 5px 5px;
+        background-repeat: no-repeat;
+    }
 
-        .sh-field input::placeholder {
-            color: var(--sh-text-faint);
-        }
+    .sh-field input:focus,
+    .sh-field select:focus {
+        border-color: var(--sh-orange);
+    }
 
-        /* File upload */
-        .sh-file {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--sh-bg);
-            border: 1px solid var(--sh-border);
-            border-radius: var(--sh-radius);
-            padding: 8px 10px;
-        }
+    .sh-field input::placeholder {
+        color: var(--sh-text-faint);
+    }
 
-        .sh-file__avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--sh-surface-hover);
-            border: 1px solid var(--sh-border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            color: var(--sh-text-faint);
-            flex-shrink: 0;
-            overflow: hidden;
-        }
+    /* File upload */
+    .sh-file {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--sh-bg);
+        border: 1px solid var(--sh-border);
+        border-radius: var(--sh-radius);
+        padding: 8px 10px;
+    }
 
-        .sh-file__avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .sh-file__avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--sh-surface-hover);
+        border: 1px solid var(--sh-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: var(--sh-text-faint);
+        flex-shrink: 0;
+        overflow: hidden;
+    }
 
-        .sh-file__input-wrap {
-            flex: 1;
-            min-width: 0;
-        }
+    .sh-file__avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-        .sh-file input[type="file"] {
-            width: 100%;
-            font-size: 12px;
-            color: var(--sh-text-muted);
-        }
+    .sh-file__input-wrap {
+        flex: 1;
+        min-width: 0;
+    }
 
-        .sh-file input[type="file"]::file-selector-button {
-            background: var(--sh-surface-hover);
-            border: 1px solid var(--sh-border);
-            border-radius: 6px;
-            color: var(--sh-text);
-            font-family: var(--sh-font-body);
-            font-size: 12px;
-            padding: 6px 10px;
-            margin-right: 10px;
-            cursor: pointer;
-        }
+    .sh-file input[type="file"] {
+        width: 100%;
+        font-size: 12px;
+        color: var(--sh-text-muted);
+    }
 
-        .sh-file input[type="file"]::file-selector-button:hover {
-            background: var(--sh-border);
-        }
+    .sh-file input[type="file"]::file-selector-button {
+        background: var(--sh-surface-hover);
+        border: 1px solid var(--sh-border);
+        border-radius: 6px;
+        color: var(--sh-text);
+        font-family: var(--sh-font-body);
+        font-size: 12px;
+        padding: 6px 10px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
 
-        .sh-hint {
-            font-size: 11px;
-            color: var(--sh-text-faint);
-            margin-top: 5px;
-        }
+    .sh-file input[type="file"]::file-selector-button:hover {
+        background: var(--sh-border);
+    }
 
-        .sh-row-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
+    .sh-hint {
+        font-size: 11px;
+        color: var(--sh-text-faint);
+        margin-top: 5px;
+    }
 
-        .sh-auth-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 22px;
-            font-size: 13px;
-        }
+    .sh-row-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
 
-        .sh-checkbox {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--sh-text-muted);
-            cursor: pointer;
-        }
+    .sh-auth-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 22px;
+        font-size: 13px;
+    }
 
-        .sh-checkbox input {
-            accent-color: var(--sh-orange);
-        }
+    .sh-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--sh-text-muted);
+        cursor: pointer;
+    }
 
-        .sh-auth-link {
-            color: var(--sh-orange);
-            font-size: 13px;
-        }
+    .sh-checkbox input {
+        accent-color: var(--sh-orange);
+    }
 
-        .sh-auth-link:hover {
-            color: var(--sh-orange-dim);
-        }
+    .sh-auth-link {
+        color: var(--sh-orange);
+        font-size: 13px;
+    }
 
-        .sh-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 9px 16px;
-            border-radius: var(--sh-radius);
-            font-size: 13px;
-            font-weight: 600;
-            border: 1px solid transparent;
-        }
+    .sh-auth-link:hover {
+        color: var(--sh-orange-dim);
+    }
 
-        .sh-btn--primary {
-            background: var(--sh-orange);
-            color: var(--sh-bg);
-        }
+    .sh-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 9px 16px;
+        border-radius: var(--sh-radius);
+        font-size: 13px;
+        font-weight: 600;
+        border: 1px solid transparent;
+    }
 
-        .sh-btn--primary:hover {
-            background: var(--sh-orange-dim);
-        }
+    .sh-btn--primary {
+        background: var(--sh-orange);
+        color: var(--sh-bg);
+    }
 
-        .sh-btn--block {
-            width: 100%;
-            justify-content: center;
-            padding: 11px 16px;
-            font-size: 14px;
-        }
+    .sh-btn--primary:hover {
+        background: var(--sh-orange-dim);
+    }
 
-        .sh-auth-footer {
-            margin-top: 22px;
-            text-align: center;
-            font-size: 12px;
-            color: var(--sh-text-faint);
-            font-family: var(--sh-font-mono);
-        }
+    .sh-btn--block {
+        width: 100%;
+        justify-content: center;
+        padding: 11px 16px;
+        font-size: 14px;
+    }
+
+    .sh-auth-footer {
+        margin-top: 22px;
+        text-align: center;
+        font-size: 12px;
+        color: var(--sh-text-faint);
+        font-family: var(--sh-font-mono);
+    }
+
+    .settings-page {
+        padding: 30px;
+    }
+
+    .settings-card {
+        width: 100%;
+        max-width: 600px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 24px;
+        box-sizing: border-box;
+    }
+
+    .settings-card h2 {
+        margin: 0 0 22px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #111;
+    }
+
+
+    /* Profile */
+
+    .profile-photo-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .profile-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #ff5a1f;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+    }
+
+    .profile-avatar span {
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+
+    /* Change Photo */
+
+    .photo-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .change-photo {
+        display: inline-block;
+        width: fit-content;
+
+        padding: 10px 20px;
+
+        border: 1px solid #ccc;
+        border-radius: 10px;
+
+        background: #fff;
+        color: #111;
+
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .change-photo:hover {
+        background: #f7f7f7;
+    }
+
+    .photo-actions p {
+        margin: 0;
+        font-size: 14px;
+        color: #777;
+    }
+
+
+    /* Form */
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-group label {
+        display: block;
+
+        margin-bottom: 7px;
+
+        font-size: 15px;
+        color: #333;
+    }
+
+    .form-group input {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 11px 15px;
+
+        border: 1px solid #ddd;
+        border-radius: 9px;
+
+        font-size: 18px;
+
+        outline: none;
+    }
+
+    .form-group input:focus {
+        border-color: #999;
+    }
+
+
+    /* Save Button */
+
+    .save-button {
+        padding: 11px 20px;
+
+        background: #fff;
+
+        border: 1px solid #ccc;
+        border-radius: 9px;
+
+        font-size: 16px;
+
+        cursor: pointer;
+    }
+
+    .save-button:hover {
+        background: #f5f5f5;
+    }
+
+    .sh-user {
+        position: relative;
+    }
+
+    .sh-user__avatar {
+        cursor: pointer;
+    }
+
+    .sh-user__dropdown {
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+
+        width: 180px;
+
+        background: #18191b;
+        border: 1px solid #2d2f32;
+        border-radius: 10px;
+
+        padding: 6px;
+
+        display: none;
+        z-index: 9999;
+    }
+
+    .sh-user__dropdown a {
+        display: block;
+        padding: 10px 12px;
+
+        color: #fff;
+        text-decoration: none;
+
+        border-radius: 7px;
+    }
+
+    .sh-user__dropdown a:hover {
+        background: #27292c;
+    }
+
+    .sh-topbar {
+        position: relative;
+        overflow: visible !important;
+        z-index: 1000;
+    }
+
+    .sh-topbar__right {
+        position: relative;
+        overflow: visible !important;
+    }
+
+    .sh-user {
+        position: relative;
+        overflow: visible !important;
+        z-index: 9999;
+    }
+
+    .sh-user__dropdown {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+
+        width: 180px;
+
+        background: #18191b;
+        border: 1px solid #303236;
+        border-radius: 10px;
+
+        padding: 6px;
+
+        display: none;
+
+        z-index: 99999;
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .sh-user__dropdown.show {
+        display: block;
+    }
+
+    .sh-user__dropdown a {
+        display: block;
+        padding: 11px 13px;
+
+        color: #fff;
+        text-decoration: none;
+
+        border-radius: 7px;
+    }
+
+    .sh-user__dropdown a:hover {
+        background: #27292c;
+    }
+
+    /* ========================================
+   USER
+======================================== */
+
+    .sh-user {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+
+    /* ========================================
+   AVATAR
+======================================== */
+
+    .sh-user__avatar {
+        width: 42px;
+        height: 42px;
+
+        border: 0;
+        border-radius: 50%;
+
+        background: #ff5a1f;
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        padding: 0;
+    }
+
+
+    /* ========================================
+   DROPDOWN
+======================================== */
+
+    .sh-user__dropdown {
+
+        position: absolute;
+
+        top: calc(100% + 10px);
+        right: 0;
+
+        width: 310px;
+
+        background: #ffffff;
+
+        border: 1px solid #e1e1e1;
+
+        border-radius: 18px;
+
+        padding: 8px;
+
+        box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.14);
+
+        display: none;
+
+        z-index: 999999;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Open */
+
+    .sh-user__dropdown.show {
+        display: block;
+    }
+
+
+    /* ========================================
+   USER PROFILE
+======================================== */
+
+    .sh-user__profile {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        padding: 12px 10px 14px;
+
+        cursor: pointer;
+    }
+
+
+    .sh-user__profile-avatar {
+
+        width: 32px;
+        height: 32px;
+
+        border-radius: 50%;
+
+        background: #e5e7eb;
+
+        color: #555;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 11px;
+        font-weight: 500;
+
+        flex-shrink: 0;
+    }
+
+
+    .sh-user__profile-info {
+        min-width: 0;
+        flex: 1;
+    }
+
+
+    .sh-user__profile-name {
+
+        font-size: 16px;
+
+        color: #111;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    .sh-user__profile-plan {
+
+        margin-top: 2px;
+
+        font-size: 14px;
+
+        color: #777;
+    }
+
+
+    .sh-user__arrow {
+
+        font-size: 28px;
+
+        line-height: 1;
+
+        color: #222;
+
+        font-weight: 300;
+    }
+
+
+    /* ========================================
+   DIVIDER
+======================================== */
+
+    .sh-user__divider {
+
+        height: 1px;
+
+        background: #e5e5e5;
+
+        margin: 4px 12px;
+    }
+
+
+    /* ========================================
+   MENU ITEM
+======================================== */
+
+    .sh-user__item {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 14px;
+
+        width: 100%;
+
+        min-height: 44px;
+
+        padding: 8px 12px;
+
+        box-sizing: border-box;
+
+        border-radius: 8px;
+
+        color: #111;
+
+        text-decoration: none;
+
+        font-size: 16px;
+
+        transition: background 0.15s ease;
+    }
+
+
+    .sh-user__item:hover {
+
+        background: #f3f3f3;
+
+    }
+
+
+    /* ========================================
+   ICON
+======================================== */
+
+    .sh-user__item-icon {
+
+        width: 22px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 21px;
+
+        color: #111;
+
+        flex-shrink: 0;
+    }
+
+
+    /* Help arrow */
+
+    .sh-user__item-arrow {
+
+        margin-left: auto;
+
+        font-size: 27px;
+
+        line-height: 1;
+
+        color: #222;
+    }
+
+    .sh-user__avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--sh-orange);
+        color: var(--sh-bg);
+        border: none;
+        outline: none;
+        font-family: var(--sh-font-display);
+        font-weight: 700;
+        font-size: 13px;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: default;
+        padding: 0;
+    }
+
+    .sh-user__avatar::selection {
+        background: transparent;
+    }
+
+    .sh-account-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+        width: 260px;
+        background: var(--sh-surface);
+        border: 1px solid var(--sh-border);
+        border-radius: 12px;
+        padding: 8px;
+        z-index: 100;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    }
+
+    .sh-account-menu--open {
+        display: block;
+    }
+
+    .sh-account-menu__email {
+        padding: 10px 12px 12px;
+        font-size: 13px;
+        color: var(--sh-text-muted);
+    }
+
+    .sh-account-menu__row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 12px;
+        font-size: 14px;
+        color: var(--sh-text);
+    }
+
+    .sh-account-menu__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 12px;
+        border-radius: 8px;
+        font-size: 14px;
+        color: var(--sh-text);
+    }
+
+    .sh-account-menu__item:hover {
+        background: var(--sh-surface-hover);
+    }
+
+    .sh-account-menu__item--danger {
+        color: var(--sh-danger);
+    }
+
+    .sh-account-menu__divider {
+        height: 1px;
+        background: var(--sh-border);
+        margin: 6px 4px;
+    }

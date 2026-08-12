@@ -1,16 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\admin\DashboardController;
-use App\Http\Controllers\admin\SignupController;
-use App\Http\Controllers\admin\SigninController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\SignupController;
+use App\Http\Controllers\Admin\SigninController;
+use App\Http\Controllers\Admin\SettingsController;
+use App\Http\Controllers\Admin\AuthController;
 
 Route::prefix('admin')->name('admin.')->group(function () {
 
     // Dashboard
-Route::get('/', function () {
-    return redirect()->route('admin.signin');
-});
+    Route::get('/', function () {
+        return redirect()->route('admin.signin');
+    });
 
     // Signup
     Route::get('/signup', [SignupController::class, 'index'])
@@ -26,6 +28,8 @@ Route::get('/', function () {
     Route::post('/signin', [SigninController::class, 'store'])
         ->name('signin.store');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-        
-    
+
+
+    Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
