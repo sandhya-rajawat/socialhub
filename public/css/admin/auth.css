@@ -437,3 +437,422 @@
     .save-button:hover {
         background: #f5f5f5;
     }
+
+    .sh-user {
+        position: relative;
+    }
+
+    .sh-user__avatar {
+        cursor: pointer;
+    }
+
+    .sh-user__dropdown {
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+
+        width: 180px;
+
+        background: #18191b;
+        border: 1px solid #2d2f32;
+        border-radius: 10px;
+
+        padding: 6px;
+
+        display: none;
+        z-index: 9999;
+    }
+
+    .sh-user__dropdown a {
+        display: block;
+        padding: 10px 12px;
+
+        color: #fff;
+        text-decoration: none;
+
+        border-radius: 7px;
+    }
+
+    .sh-user__dropdown a:hover {
+        background: #27292c;
+    }
+
+    .sh-topbar {
+        position: relative;
+        overflow: visible !important;
+        z-index: 1000;
+    }
+
+    .sh-topbar__right {
+        position: relative;
+        overflow: visible !important;
+    }
+
+    .sh-user {
+        position: relative;
+        overflow: visible !important;
+        z-index: 9999;
+    }
+
+    .sh-user__dropdown {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+
+        width: 180px;
+
+        background: #18191b;
+        border: 1px solid #303236;
+        border-radius: 10px;
+
+        padding: 6px;
+
+        display: none;
+
+        z-index: 99999;
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .sh-user__dropdown.show {
+        display: block;
+    }
+
+    .sh-user__dropdown a {
+        display: block;
+        padding: 11px 13px;
+
+        color: #fff;
+        text-decoration: none;
+
+        border-radius: 7px;
+    }
+
+    .sh-user__dropdown a:hover {
+        background: #27292c;
+    }
+
+    /* ========================================
+   USER
+======================================== */
+
+    .sh-user {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+
+    /* ========================================
+   AVATAR
+======================================== */
+
+    .sh-user__avatar {
+        width: 42px;
+        height: 42px;
+
+        border: 0;
+        border-radius: 50%;
+
+        background: #ff5a1f;
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        padding: 0;
+    }
+
+
+    /* ========================================
+   DROPDOWN
+======================================== */
+
+    .sh-user__dropdown {
+
+        position: absolute;
+
+        top: calc(100% + 10px);
+        right: 0;
+
+        width: 310px;
+
+        background: #ffffff;
+
+        border: 1px solid #e1e1e1;
+
+        border-radius: 18px;
+
+        padding: 8px;
+
+        box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.14);
+
+        display: none;
+
+        z-index: 999999;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Open */
+
+    .sh-user__dropdown.show {
+        display: block;
+    }
+
+
+    /* ========================================
+   USER PROFILE
+======================================== */
+
+    .sh-user__profile {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        padding: 12px 10px 14px;
+
+        cursor: pointer;
+    }
+
+
+    .sh-user__profile-avatar {
+
+        width: 32px;
+        height: 32px;
+
+        border-radius: 50%;
+
+        background: #e5e7eb;
+
+        color: #555;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 11px;
+        font-weight: 500;
+
+        flex-shrink: 0;
+    }
+
+
+    .sh-user__profile-info {
+        min-width: 0;
+        flex: 1;
+    }
+
+
+    .sh-user__profile-name {
+
+        font-size: 16px;
+
+        color: #111;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    .sh-user__profile-plan {
+
+        margin-top: 2px;
+
+        font-size: 14px;
+
+        color: #777;
+    }
+
+
+    .sh-user__arrow {
+
+        font-size: 28px;
+
+        line-height: 1;
+
+        color: #222;
+
+        font-weight: 300;
+    }
+
+
+    /* ========================================
+   DIVIDER
+======================================== */
+
+    .sh-user__divider {
+
+        height: 1px;
+
+        background: #e5e5e5;
+
+        margin: 4px 12px;
+    }
+
+
+    /* ========================================
+   MENU ITEM
+======================================== */
+
+    .sh-user__item {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 14px;
+
+        width: 100%;
+
+        min-height: 44px;
+
+        padding: 8px 12px;
+
+        box-sizing: border-box;
+
+        border-radius: 8px;
+
+        color: #111;
+
+        text-decoration: none;
+
+        font-size: 16px;
+
+        transition: background 0.15s ease;
+    }
+
+
+    .sh-user__item:hover {
+
+        background: #f3f3f3;
+
+    }
+
+
+    /* ========================================
+   ICON
+======================================== */
+
+    .sh-user__item-icon {
+
+        width: 22px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 21px;
+
+        color: #111;
+
+        flex-shrink: 0;
+    }
+
+
+    /* Help arrow */
+
+    .sh-user__item-arrow {
+
+        margin-left: auto;
+
+        font-size: 27px;
+
+        line-height: 1;
+
+        color: #222;
+    }
+
+    .sh-user__avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--sh-orange);
+        color: var(--sh-bg);
+        border: none;
+        outline: none;
+        font-family: var(--sh-font-display);
+        font-weight: 700;
+        font-size: 13px;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: default;
+        padding: 0;
+    }
+
+    .sh-user__avatar::selection {
+        background: transparent;
+    }
+
+    .sh-account-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+        width: 260px;
+        background: var(--sh-surface);
+        border: 1px solid var(--sh-border);
+        border-radius: 12px;
+        padding: 8px;
+        z-index: 100;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    }
+
+    .sh-account-menu--open {
+        display: block;
+    }
+
+    .sh-account-menu__email {
+        padding: 10px 12px 12px;
+        font-size: 13px;
+        color: var(--sh-text-muted);
+    }
+
+    .sh-account-menu__row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 12px;
+        font-size: 14px;
+        color: var(--sh-text);
+    }
+
+    .sh-account-menu__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 12px;
+        border-radius: 8px;
+        font-size: 14px;
+        color: var(--sh-text);
+    }
+
+    .sh-account-menu__item:hover {
+        background: var(--sh-surface-hover);
+    }
+
+    .sh-account-menu__item--danger {
+        color: var(--sh-danger);
+    }
+
+    .sh-account-menu__divider {
+        height: 1px;
+        background: var(--sh-border);
+        margin: 6px 4px;
+    }

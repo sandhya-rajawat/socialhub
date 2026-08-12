@@ -342,16 +342,21 @@ button {
 }
 
 .sh-user__avatar {
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 38px;
     border-radius: 50%;
     background: var(--sh-orange);
     color: var(--sh-bg);
     font-family: var(--sh-font-display);
     font-weight: 700;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
+    font-size: 13px;
+    text-align: center;
+}
+
+.sh-user__avatar {
     font-size: 13px;
 }
 
@@ -475,211 +480,476 @@ button {
         transition: none !important;
     }
 }
-    :root {
-            --sh-bg: #0B0B0C;
-            --sh-surface: #17181A;
-            --sh-surface-hover: #202124;
-            --sh-border: #2A2B2E;
-            --sh-orange: #FF5A1F;
-            --sh-orange-dim: #B8431A;
-            --sh-orange-glow: rgba(255, 90, 31, 0.18);
-            --sh-text: #F2F1EE;
-            --sh-text-muted: #8C8D91;
-            --sh-text-faint: #5C5D61;
-            --sh-success: #3FBF7F;
-            --sh-danger: #E5484D;
 
-            --sh-font-display: 'Space Grotesk', 'Inter', sans-serif;
-            --sh-font-body: 'Inter', -apple-system, sans-serif;
-            --sh-font-mono: 'JetBrains Mono', 'Courier New', monospace;
+:root {
+    --sh-bg: #0B0B0C;
+    --sh-surface: #17181A;
+    --sh-surface-hover: #202124;
+    --sh-border: #2A2B2E;
+    --sh-orange: #FF5A1F;
+    --sh-orange-dim: #B8431A;
+    --sh-orange-glow: rgba(255, 90, 31, 0.18);
+    --sh-text: #F2F1EE;
+    --sh-text-muted: #8C8D91;
+    --sh-text-faint: #5C5D61;
+    --sh-success: #3FBF7F;
+    --sh-danger: #E5484D;
 
-            --sh-radius: 8px;
-        }
+    --sh-font-display: 'Space Grotesk', 'Inter', sans-serif;
+    --sh-font-body: 'Inter', -apple-system, sans-serif;
+    --sh-font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
-        * { box-sizing: border-box; }
+    --sh-radius: 8px;
+}
 
-        body {
-            margin: 0;
-            font-family: var(--sh-font-body);
-            font-size: 14px;
-            line-height: 1.5;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        a { color: inherit; text-decoration: none; }
-        button { font-family: inherit; cursor: pointer; }
+body {
+    margin: 0;
+    font-family: var(--sh-font-body);
+    font-size: 14px;
+    line-height: 1.5;
+}
 
-        .sh-auth-page {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--sh-bg);
-            background-image: radial-gradient(circle at 50% 0%, var(--sh-orange-glow), transparent 60%);
-            padding: 20px;
-        }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-        .sh-auth-card {
-            width: 100%;
-            max-width: 380px;
-            background: var(--sh-surface);
-            border: 1px solid var(--sh-border);
-            border-radius: 12px;
-            padding: 32px 28px;
-        }
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
 
-        .sh-auth-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 28px;
-        }
+.sh-auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--sh-bg);
+    background-image: radial-gradient(circle at 50% 0%, var(--sh-orange-glow), transparent 60%);
+    padding: 20px;
+}
 
-        .sh-auth-logo {
-            font-family: var(--sh-font-display);
-            font-weight: 700;
-            font-size: 15px;
-            letter-spacing: 0.02em;
-            color: var(--sh-bg);
-            background: var(--sh-orange);
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
+.sh-auth-card {
+    width: 100%;
+    max-width: 380px;
+    background: var(--sh-surface);
+    border: 1px solid var(--sh-border);
+    border-radius: 12px;
+    padding: 32px 28px;
+}
 
-        .sh-auth-brand-text {
-            display: flex;
-            flex-direction: column;
-        }
+.sh-auth-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+}
 
-        .sh-auth-brand-label {
-            font-family: var(--sh-font-mono);
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--sh-text-faint);
-        }
+.sh-auth-logo {
+    font-family: var(--sh-font-display);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    color: var(--sh-bg);
+    background: var(--sh-orange);
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
 
-        .sh-auth-brand-name {
-            font-family: var(--sh-font-display);
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--sh-text);
-        }
+.sh-auth-brand-text {
+    display: flex;
+    flex-direction: column;
+}
 
-        .sh-auth-title {
-            font-family: var(--sh-font-display);
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--sh-text);
-            margin: 0 0 4px;
-        }
+.sh-auth-brand-label {
+    font-family: var(--sh-font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--sh-text-faint);
+}
 
-        .sh-auth-subtitle {
-            font-size: 13px;
-            color: var(--sh-text-muted);
-            margin: 0 0 24px;
-        }
+.sh-auth-brand-name {
+    font-family: var(--sh-font-display);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--sh-text);
+}
 
-        .sh-field {
-            margin-bottom: 16px;
-        }
+.sh-auth-title {
+    font-family: var(--sh-font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--sh-text);
+    margin: 0 0 4px;
+}
 
-        .sh-field label {
-            display: block;
-            font-family: var(--sh-font-mono);
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--sh-text-faint);
-            margin-bottom: 6px;
-        }
+.sh-auth-subtitle {
+    font-size: 13px;
+    color: var(--sh-text-muted);
+    margin: 0 0 24px;
+}
 
-        .sh-field input[type="email"],
-        .sh-field input[type="password"] {
-            width: 100%;
-            background: var(--sh-bg);
-            border: 1px solid var(--sh-border);
-            border-radius: var(--sh-radius);
-            padding: 10px 12px;
-            font-family: var(--sh-font-body);
-            font-size: 13px;
-            color: var(--sh-text);
-            outline: none;
-            transition: border-color 0.15s ease;
-        }
+.sh-field {
+    margin-bottom: 16px;
+}
 
-        .sh-field input:focus {
-            border-color: var(--sh-orange);
-        }
+.sh-field label {
+    display: block;
+    font-family: var(--sh-font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--sh-text-faint);
+    margin-bottom: 6px;
+}
 
-        .sh-field input::placeholder {
-            color: var(--sh-text-faint);
-        }
+.sh-field input[type="email"],
+.sh-field input[type="password"] {
+    width: 100%;
+    background: var(--sh-bg);
+    border: 1px solid var(--sh-border);
+    border-radius: var(--sh-radius);
+    padding: 10px 12px;
+    font-family: var(--sh-font-body);
+    font-size: 13px;
+    color: var(--sh-text);
+    outline: none;
+    transition: border-color 0.15s ease;
+}
 
-        .sh-auth-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 22px;
-            font-size: 13px;
-        }
+.sh-field input:focus {
+    border-color: var(--sh-orange);
+}
 
-        .sh-checkbox {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--sh-text-muted);
-            cursor: pointer;
-        }
+.sh-field input::placeholder {
+    color: var(--sh-text-faint);
+}
 
-        .sh-checkbox input {
-            accent-color: var(--sh-orange);
-        }
+.sh-auth-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    font-size: 13px;
+}
 
-        .sh-auth-link {
-            color: var(--sh-orange);
-            font-size: 13px;
-        }
+.sh-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--sh-text-muted);
+    cursor: pointer;
+}
 
-        .sh-auth-link:hover {
-            color: var(--sh-orange-dim);
-        }
+.sh-checkbox input {
+    accent-color: var(--sh-orange);
+}
 
-        .sh-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 9px 16px;
-            border-radius: var(--sh-radius);
-            font-size: 13px;
-            font-weight: 600;
-            border: 1px solid transparent;
-        }
+.sh-auth-link {
+    color: var(--sh-orange);
+    font-size: 13px;
+}
 
-        .sh-btn--primary {
-            background: var(--sh-orange);
-            color: var(--sh-bg);
-        }
+.sh-auth-link:hover {
+    color: var(--sh-orange-dim);
+}
 
-        .sh-btn--primary:hover {
-            background: var(--sh-orange-dim);
-        }
+.sh-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 16px;
+    border-radius: var(--sh-radius);
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
 
-        .sh-btn--block {
-            width: 100%;
-            justify-content: center;
-            padding: 11px 16px;
-            font-size: 14px;
-        }
+.sh-btn--primary {
+    background: var(--sh-orange);
+    color: var(--sh-bg);
+}
 
-        .sh-auth-footer {
-            margin-top: 22px;
-            text-align: center;
-            font-size: 12px;
-            color: var(--sh-text-faint);
-            font-family: var(--sh-font-mono);
-        }
+.sh-btn--primary:hover {
+    background: var(--sh-orange-dim);
+}
+
+.sh-btn--block {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 16px;
+    font-size: 14px;
+}
+
+.sh-auth-footer {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--sh-text-faint);
+    font-family: var(--sh-font-mono);
+}
+
+.sh-user {
+    position: relative;
+}
+
+
+/* Avatar button */
+
+.sh-profile-button {
+    width: 42px !important;
+    height: 42px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    background: #ff5a1f !important;
+    color: white !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 14px !important;
+    font-weight: 600 !important;
+
+    cursor: pointer !important;
+}
+
+
+/* Main menu */
+
+.sh-profile-menu {
+    position: absolute !important;
+
+    top: calc(100% + 10px) !important;
+    right: 0 !important;
+
+    width: 310px !important;
+
+    padding: 8px !important;
+
+    box-sizing: border-box !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #dedede !important;
+
+    border-radius: 18px !important;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18) !important;
+
+    display: none !important;
+
+    z-index: 999999 !important;
+}
+
+
+.sh-profile-menu.open {
+    display: block !important;
+}
+
+
+/* User header */
+
+.sh-profile-header {
+    width: 100% !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    padding: 12px !important;
+
+    box-sizing: border-box !important;
+}
+
+
+.sh-profile-small-avatar {
+    width: 32px !important;
+    height: 32px !important;
+
+    min-width: 32px !important;
+
+    border-radius: 50% !important;
+
+    background: #e5e7eb !important;
+    color: #555 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 11px !important;
+}
+
+
+.sh-profile-user-info {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+
+.sh-profile-name {
+    font-size: 16px !important;
+    color: #111 !important;
+
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+
+.sh-profile-plan {
+    margin-top: 2px !important;
+
+    font-size: 14px !important;
+    color: #777 !important;
+}
+
+
+.sh-profile-arrow {
+    font-size: 28px !important;
+    color: #111 !important;
+}
+
+
+/* Divider */
+
+.sh-profile-line {
+    width: calc(100% - 16px) !important;
+    height: 1px !important;
+
+    margin: 4px 8px !important;
+
+    background: #e5e5e5 !important;
+}
+
+
+/* Menu items */
+
+.sh-profile-item {
+    width: 100% !important;
+
+    min-height: 44px !important;
+
+    padding: 8px 12px !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 14px !important;
+
+    border-radius: 8px !important;
+
+    color: #111 !important;
+
+    background: transparent !important;
+
+    text-decoration: none !important;
+
+    font-size: 16px !important;
+
+    line-height: normal !important;
+}
+
+
+.sh-profile-item:hover {
+    background: #f3f3f3 !important;
+}
+
+
+.sh-profile-icon {
+    width: 22px !important;
+
+    min-width: 22px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 20px !important;
+}
+
+
+.sh-profile-right-arrow {
+    margin-left: auto !important;
+
+    font-size: 26px !important;
+}
+
+.sh-account-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 260px;
+    background: var(--sh-surface);
+    border: 1px solid var(--sh-border);
+    border-radius: 12px;
+    padding: 8px;
+    z-index: 100;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.sh-account-menu--open {
+    display: block;
+}
+
+.sh-account-menu__email {
+    padding: 10px 12px 12px;
+    font-size: 13px;
+    color: var(--sh-text-muted);
+}
+
+.sh-account-menu__row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: var(--sh-text);
+}
+
+.sh-account-menu__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--sh-text);
+}
+
+.sh-account-menu__item:hover {
+    background: var(--sh-surface-hover);
+}
+
+.sh-account-menu__item--danger {
+    color: var(--sh-danger);
+}
+
+.sh-account-menu__divider {
+    height: 1px;
+    background: var(--sh-border);
+    margin: 6px 4px;
+}
