@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\SignupController;
 use App\Http\Controllers\Admin\SigninController;
 use App\Http\Controllers\Admin\SettingsController;
+use App\Http\Controllers\Admin\AuthController;
 
 Route::prefix('admin')->name('admin.')->group(function () {
 
@@ -30,4 +31,5 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 
     Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });

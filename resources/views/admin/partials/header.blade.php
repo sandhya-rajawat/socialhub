@@ -71,10 +71,15 @@
 
                 <div class="sh-account-menu__divider"></div>
 
-                <a href="#" class="sh-account-menu__item sh-account-menu__item--danger">
-                    <i class="ti ti-logout"></i>
-                    <span>Log out</span>
-                </a>
+                            <form method="POST" action="{{ route('admin.logout') }} ">
+                    @csrf
+                    <button type="submit" class="sh-account-menu__item sh-account-menu__item--danger">
+                        <i class="ti ti-logout"></i>
+                        <span>Log out</span>
+                    </button>
+                </form>
+ 
+
 
             </div>
 
